@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <title>Forecast finder</title>
+</head>
+<body>
+    <header class="head">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="row">
+        <div class="column">
+            <nav id="searchbar">
+                <h2>Enter a city</h2>
+                <form id="form" onsubmit="return false">
+                    <input type="text" class="cityEntry" id="cityEntry">
+                </form>
+            </nav>
+            <section>
+                <span id="prevEntries"></span>
+            </section>
+        </div>
+        <div class="biggerColumn">
+            <section class="cityEntered">
+                <ul>City: <span id="city"></span></ul>
+                <ul>Temperature: <span id="temperature"></span></ul>
+                <ul>Wind: <span id="wind"></span></ul>
+                <ul>Humidity: <span id="humidity"></span></ul>
+            </section>
+            <section class="fiveDay">
+                <h2>5-Day Forecast:</h2>
+                <a class="day">t</a>
+                <a class="day">t</a>
+                <a class="day">t</a>
+                <a class="day">t</a>
+                <a class="day">t</a>
+            </section>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

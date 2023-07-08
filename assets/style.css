@@ -1,0 +1,56 @@
+* {
+    background-color: cyan;
+}
+
+.cityEntered {
+    outline-style: solid;
+    outline-color: black;
+    background-color: white;
+}
+.cityEntered * {
+    background-color: white;
+}
+.column, .biggerColumn {
+    float:left;
+}
+.column {
+    width:25%;
+    margin-right: 10px;
+}
+.biggerColumn {
+    width:70%;
+}
+.fiveDay {
+    background-color: cyan;
+}
+.day {
+    float:left;
+    width:20%;
+    background-color: blue;
+    height:30px;
+    outline-style:solid;
+    outline-color: black;
+}
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .temperature,
+  .wind,
+  .humidity {
+    margin-top: 5px;
+  }
+  .forecastBox {
+    background-color: #C4E1FF;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+#searchbar {
+    outline-style: solid;
+    outline-color: black;
+}
+#searchbar, #searchbar * {
+    background-color: white;
+}
