@@ -27,7 +27,7 @@
     float:left;
     width:20%;
     background-color: blue;
-    height:30px;
+    height:40px;
     outline-style:solid;
     outline-color: black;
 }
@@ -46,6 +46,13 @@
     padding: 10px;
     margin-bottom: 10px;
   }
+  
+  .forecastBox img {
+    background-color: white;
+    padding: 5px;
+    margin-left: 10%;
+  }
+  
   
 #searchbar {
     outline-style: solid;

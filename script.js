@@ -32,8 +32,15 @@ function currentForecast() {
       document.getElementById("wind").textContent = forecastData[0].wind.speed;
       document.getElementById("humidity").textContent = forecastData[0].main.humidity;
 
+      // Display current weather image
+      var currentWeatherImage = document.getElementById("currentWeatherImage");
+      currentWeatherImage.innerHTML = ""; // Clear previous image
+      var currentWeatherIcon = document.createElement("img");
+      currentWeatherIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + currentWeather.icon + ".png");
+      currentWeatherImage.appendChild(currentWeatherIcon);
+
       // Display 5-day forecast
-      var forecastSection = document.querySelector(".fiveDay");
+      var forecastSection = document.getElementById("forecastBoxes");
       forecastSection.innerHTML = ""; // Clear previous forecast boxes
 
       var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -55,7 +62,7 @@ function currentForecast() {
         forecastBox.appendChild(iconImg);
 
         var infoContainer = document.createElement("div");
-        infoContainer.classList.add("infoContainer"); // Add CSS class
+        infoContainer.classList.add("infoContainer");
 
         var tempSpan = document.createElement("span");
         tempSpan.classList.add("temperature");
@@ -86,7 +93,14 @@ function write() {
   count++;
   var cityName = document.querySelector(".cityEntry");
   if (count > 1) {
-    document.getElementById("prevEntries").innerHTML += cityName.value + "<br/>";
+    var entryList = document.getElementById("entryList");
+    var entryButton = document.createElement("button");
+    entryButton.textContent = cityName.value;
+    entryButton.addEventListener("click", function () {
+      cityName.value = entryButton.textContent;
+      currentForecast();
+    });
+    entryList.appendChild(entryButton);
   }
 }
 
